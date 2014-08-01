@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="iso8859-1"/>
+  <title>libn</title>
+  <style type="text/css">
+    body {
+      width: 47em;
+      margin: auto;
+      text-align: justify;
+      font-family: sans-serif;
+    }
+
+    footer {
+      font-size: small;
+      margin: 3em 0em 1em 0em;
+    }
+
+    section {
+      padding: 0em 0em 1.25em 0em;
+    }
+
+    section header h1 {
+      background-color: #ccc;
+      padding: 0.15em;
+      font-weight: normal;
+    }
+
+    a {
+      color: #00c;
+    }
+
+    a:hover {
+      color: #00f;
+    }
+
+    pre {
+      margin: 0em 2em 0em 2em;
+      background-color: #ccc;
+      padding: 0em 1em 0em 1em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <hgroup>
+    <h1>&rarr; &rarr; libn</h1>
+  </hgroup>
+  <hr/>
+</header>
+
+<!-- -->
+
+<section>
+  <p><strong>libn</strong> is a small library to help make writing C a little
+  more fun. It is a portable, lightweight and BSD-licensed alternative to Glib
+  and GObject, or something like a less cumbersome version of Boost, but for
+  straight C instead of C++.</p>
+
+  <p>Under the hood, libn uses <a href="http://mruby.org">mruby</a> to make
+  object-oriented programming in C actually doable. You could think of libn as
+  a collection of convenience routines on top of mruby, but mruby is really
+  just an implementation detail.</p>
+</section>
+
+<!-- -->
+
+<section>
+  <header><h1>Hello, libn</h1></header>
+
+  <p>With libn, you can write code like this:</p>
+
+  <pre><code>
+/*
+ * hello.c
+ */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;libn.h&gt;
+
+int
+main(void)
+{
+  nstringhash *person;
+
+  libn_start();
+  person = nstringhash_new();
+  nstringhash_set(person, "firstname", "Mildred");
+  nstringhash_set(person, "lastname", "Haversham");
+  printf("%s\n", nstringhash_inspect(person));
+
+  nstringhash_free(person);
+  libn_finish();
+  return EXIT_SUCCESS;
+}
+  </code></pre>
+
+  <p>And then compile it like this:</p>
+
+  <pre><code>
+$ clang -Wall \
+  -o hello \
+  hello.c \
+  -lmruby -lm -ln
+  </code></pre>
+</section>
+
+<!-- -->
+
+<section>
+  <header><h1>What's wrong with Glib and GObject?</h1></header>
+
+  <ul>
+    <li>Unnecessary portability typedefs.</li>
+    <li>THEY'RE WAAAY TOO HUGE.</li>
+    <li>Extremely portable, yet nearly impossible to build on some systems (OS
+    X, most notably).</li>
+    <li>Documentation is pretty good, but you have to use devhelp(1) in order
+    to read it :(</li>
+    <li>GObject really does NOT make any sense.</li>
+    <li>You can't statically link against them.</li>
+    <li>You can't simply copy the source code into your project. (Well, you can
+    <em>try</em>, but you'll always fail.)</li>
+  </ul>
+</section>
+
+<!-- -->
+
+<section>
+  <header><h1>Get the source</h1></header>
+
+  <p>libn's source code is maintained inside of a Git repository hosted at
+  GitHub. It is released under a 2-clause BSD-style license. See the LICENSE
+  file inside the source distribution for details.</p>
+</section>
+
+<!-- -->
+
+<section>
+  <header><h1>Who's responsible for all of this?</h1></header>
+
+  <p>This is all Christian Koch's fault.</p>
+</section>
+
+<!-- -->
+
+<footer>
+  <hr/>
+  <p>&copy;2014 Christian Koch.</p>
+</footer>
+  
+</body>
+</html>

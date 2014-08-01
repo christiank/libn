@@ -1,0 +1,21 @@
+== libn TODO list ==
+
+- Does libn "vendor" mruby? I *can*, but I don't know if I should. For now,
+  it doesn't.
+
+- To what extent is libn responsible for making *objects* with *methods* and
+  *properties* and all that fun stuff?
+
+- To what extent does libn advocate Rubyisms?
+
+- A Makefile that doesn't require BSD make(1) would be cool.
+
+- Man pages for EVERYTHING -- use ronn for that?? Or just mandoc?
+
+- Should (nstringhash)'s keys be internally kept as Symbols? Does that save
+  memory?
+
+- Can we turn any (void*) into an (mrb_value)? How?
+
+- How to actually free the memory of (mrb_value)s we create *besides* just
+  freeing the (mrb_state) itself?

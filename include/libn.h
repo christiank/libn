@@ -1,0 +1,16 @@
+/*
+ * libn.h
+ * Christian Koch <cfkoch@sdf.lonestar.org>
+ */
+
+#ifndef LIBN_H
+#define LIBN_H
+
+#define LIBN_VERSION "v0.0.0a"
+
+#include "libn/global.h"
+#include "libn/narray.h"
+#include "libn/nhash.h"
+#include "libn/nstring.h"
+
+#endif /* LIBN_H */

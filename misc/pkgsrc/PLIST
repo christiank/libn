@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/mirb
+bin/mrbc
+bin/mruby
+lib/libmruby.a
+lib/libmruby_core.a

@@ -3,6 +3,7 @@
  * Christian Koch <cfkoch@sdf.lonestar.org>
  */
 
+#include <stdarg.h>
 #include <stdlib.h>
 #include <mruby.h>
 #include <mruby/array.h>
@@ -30,36 +31,48 @@ narray_free(narray *array)
 
 
 void
-narray_push(narray *array, ...)
+narray_push(narray *array, const void *item)
 {
 }
 
 
 void
-narray_pop(narray *array, ...)
+narray_push_many(narray *array, ...)
+{
+}
+
+
+void *
+narray_pop(narray *array)
 {
 }
 
 
 void
+narray_unshift(narray *array, const void *item)
+{
+}
+
+
+void
+narray_unshift_many(narray *array, ...)
+{
+}
+
+
+void *
 narray_shift(narray *array)
 {
 }
 
 
 void
-narray_unshift(narray *array)
+narray_insert(narray *array, const unsigned int index, const void *item)
 {
 }
 
 
-void
-narray_set(const narray *array, const unsigned int index, ...)
-{
-}
-
-
-void
+void *
 narray_get(const narray *array, const unsigned int index)
 {
 }

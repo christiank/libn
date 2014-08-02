@@ -12,6 +12,18 @@
 .\" =====
 .Sh SYNOPSIS
 .Fd "#include <libn.h>"
+.Ft "nhash *"
+.Fn nhash_new "void"
+.Ft "void"
+.Fn nhash_free "nhash *hash"
+.Ft "void"
+.Fn nhash_set "nhash *hash , const char *key , const void *ptr"
+.Ft "void *"
+.Fn nhash_get "const nhash *hash , const char *key"
+.Ft void
+.Fn nhash_delete "nhash *hash , const char *key"
+.Ft char *
+.Fn nhash_inspect "const nhash *hash"
 .Ft "nstringhash *"
 .Fn nstringhash_new "void"
 .Ft "void"
@@ -19,7 +31,7 @@
 .Ft "void"
 .Fn nstringhash_set "nstringhash *hash , const char *key , const char *value"
 .Ft "char *"
-.Fn nstringhash_get "nstringhash *hash , const char *key"
+.Fn nstringhash_get "const nstringhash *hash , const char *key"
 .Ft void
 .Fn nstringhash_delete "nstringhash *hash , const char *key"
 .Ft char *

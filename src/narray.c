@@ -38,12 +38,18 @@ narray_push(narray *array, const void *item)
 }
 
 
-/*
- * XXX TODO
- */
 void
 narray_push_many(narray *array, ...)
 {
+  va_list ap;
+  void *arg;
+
+  va_start(ap, array);
+
+  while ((arg = va_arg(ap, void*)) != NULL)
+    narray_push(array, arg);
+
+  va_end(ap);
 }
 
 
@@ -62,12 +68,18 @@ narray_unshift(narray *array, const void *item)
 }
 
 
-/*
- * XXX TODO
- */
 void
 narray_unshift_many(narray *array, ...)
 {
+  va_list ap;
+  void *arg;
+
+  va_start(ap, array);
+
+  while ((arg = va_arg(ap, void*)) != NULL)
+    narray_unshift(array, arg);
+
+  va_end(ap);
 }
 
 

@@ -63,6 +63,20 @@ array_test(void)
 }
 
 
+void
+array_test2(void)
+{
+  narray *array;
+
+  array = narray_new();
+  narray_push_many(array,
+    "some data", "some more data", "even moar dataaa", NULL);
+  printf("%s\n", narray_inspect(array));
+  
+  narray_free(array);
+}
+
+
 int
 main(void)
 {
@@ -70,7 +84,8 @@ main(void)
 
   string_test(); sep();
   stringhash_test(); sep();
-  array_test();
+  array_test(); sep();
+  array_test2();
 
   libn_finish();
   return EXIT_SUCCESS;

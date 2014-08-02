@@ -33,9 +33,14 @@ narray_free(narray *array)
 void
 narray_push(narray *array, const void *item)
 {
+  mrb_ary_push(__LIBN_R, array->_array,
+    mrb_cptr_value(__LIBN_R, (void*)item));
 }
 
 
+/*
+ * XXX TODO
+ */
 void
 narray_push_many(narray *array, ...)
 {
@@ -45,15 +50,21 @@ narray_push_many(narray *array, ...)
 void *
 narray_pop(narray *array)
 {
+  return mrb_ary_pop(__LIBN_R, array->_array).value.p;
 }
 
 
 void
 narray_unshift(narray *array, const void *item)
 {
+  mrb_ary_unshift(__LIBN_R, array->_array,
+    mrb_cptr_value(__LIBN_R, (void*)item));
 }
 
 
+/*
+ * XXX TODO
+ */
 void
 narray_unshift_many(narray *array, ...)
 {
@@ -63,21 +74,28 @@ narray_unshift_many(narray *array, ...)
 void *
 narray_shift(narray *array)
 {
+  return mrb_ary_shift(__LIBN_R, array->_array).value.p;
 }
 
 
 void
 narray_insert(narray *array, const unsigned int index, const void *item)
 {
+  mrb_ary_set(__LIBN_R, array->_array, index,
+    mrb_cptr_value(__LIBN_R, (void*)item));
 }
 
 
 void *
 narray_get(const narray *array, const unsigned int index)
 {
+  return mrb_ary_ref(__LIBN_R, array->_array, index).value.p;
 }
 
 
+/*
+ * XXX TODO
+ */
 void
 narray_delete(narray *array, const unsigned int index)
 {

@@ -54,7 +54,10 @@ array_test(void)
   narray *array;
 
   array = narray_new();
+  narray_insert(array, 2, "blahdeblah");
+  narray_insert(array, 0, "--hahah");
   printf("%s\n", narray_inspect(array));
+  printf("0 => %s\n", narray_get(array, 0));
 
   narray_free(array);
 }

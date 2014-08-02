@@ -32,6 +32,22 @@ string_test(void)
 
 
 void
+string_test2(void)
+{
+  nstring *str;
+
+  str = nstring_new("");
+  printf("%s\n", nstring_inspect(str));
+  nstring_cat_cstr(str, "abc");
+  printf("%s\n", nstring_inspect(str));
+  nstring_cat_cstr(str, "def");
+  printf("%s\n", nstring_inspect(str));
+
+  nstring_free(str);
+}
+
+
+void
 stringhash_test(void)
 {
   nstringhash *person;
@@ -83,6 +99,7 @@ main(void)
   libn_start();
 
   string_test(); sep();
+  string_test2(); sep();
   stringhash_test(); sep();
   array_test(); sep();
   array_test2();

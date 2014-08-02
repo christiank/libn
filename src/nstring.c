@@ -28,15 +28,25 @@ nstring_free(nstring *str)
 }
 
 
+/*
+ * XXX This modifies and returns str1, is that what we intend?
+ */
 nstring *
 nstring_cat(nstring *str1, nstring *str2)
 {
+  mrb_str_append(__LIBN_R, str1->_string, str2->_string);
+  return str1;
 }
 
 
+/*
+ * XXX This modifies and returns str1, is that what we intend?
+ */
 nstring *
 nstring_cat_cstr(nstring *str1, const char *str2)
 {
+  mrb_str_append(__LIBN_R, str1->_string, mrb_str_new_cstr(__LIBN_R, str2));
+  return str1;
 }
 
 

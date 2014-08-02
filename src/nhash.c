@@ -38,7 +38,7 @@ nhash_set(nhash *hash, const char *key, const void *ptr)
 
 
 void *
-nhash_get(nhash *hash, const char *key)
+nhash_get(const nhash *hash, const char *key)
 {
   return mrb_hash_get(__LIBN_R,
     hash->_hash, mrb_str_new_cstr(__LIBN_R, key)).value.p;
@@ -88,7 +88,7 @@ nstringhash_set(nstringhash *hash, const char *key, const char *value)
 
 
 char *
-nstringhash_get(nstringhash *hash, const char *key)
+nstringhash_get(const nstringhash *hash, const char *key)
 {
   return mrb_str_to_cstr(__LIBN_R,
     mrb_hash_get(__LIBN_R, hash->_hash, mrb_str_new_cstr(__LIBN_R, key)));

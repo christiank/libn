@@ -1,0 +1,18 @@
+== Installing libn ==
+
+libn itself is very small, easy to compile and written in portable C.
+However, it depends on mruby, but not too many operating systems maintain
+packages for it. That means you're going to have to build everything in
+place.
+
+
+== 1. Fetch and install mruby ==
+
+Get mruby-1.0.0 at http://mruby.org and build it. No need to install it, but
+note the static library in build/host/lib/libmruby.a.
+
+
+== 2. Install libn ==
+
+This is really easy. Type "make". It should generate a static library called
+"libn.a."

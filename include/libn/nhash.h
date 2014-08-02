@@ -18,6 +18,10 @@ typedef struct nhash nhash;
 
 nhash *nhash_new(void);
 void nhash_free(nhash *hash);
+void nhash_set(nhash *hash, const char *key, const void *ptr);
+void *nhash_get(nhash *hash, const char *key);
+void nhash_delete(nhash *hash, const char *key);
+char *nhash_inspect(const nhash *hash);
 
 /* */
 

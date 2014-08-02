@@ -11,11 +11,13 @@ default: html-docs
 html-docs: \
 	libn.7.html \
 	narray.3.html \
+	nhash.3.html \
 	nstring.3.html
 
 pdf-docs: \
 	libn.7.pdf \
 	narray.3.pdf \
+	nhash.3.pdf \
 	nstring.3.pdf
 
 #####

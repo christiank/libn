@@ -17,25 +17,74 @@
 .Ft "void"
 .Fn narray_free "narray *array"
 .Ft "void"
-.Fn narray_push
+.Fn narray_push "narray *array, const void *item"
 .Ft "void"
-.Fn narray_pop
+.Fn narray_push_many "narray *array, ..."
+.Ft "void *"
+.Fn narray_pop "narray *array"
 .Ft "void"
-.Fn narray_shift
+.Fn narray_unshift "narray *array, const void *item"
 .Ft "void"
-.Fn narray_unshift
+.Fn narray_unshift_many "narray *array, ..."
+.Ft "void* "
+.Fn narray_shift "narray *array"
 .Ft "void"
-.Fn narray_set
+.Fn narray_insert "narray *array, const unsigned int index, const void *item"
+.Ft "void *"
+.Fn narray_get "const narray *array, const unsigned int index"
 .Ft "void"
-.Fn narray_get
-.Ft "void"
-.Fn narray_delete
+.Fn narray_delete "narray *narray, const unsigned int index"
 .Ft "char *"
 .Fn narray_inspect "const narray *array"
 .\" ====="
 .Sh DESCRIPTION
 .Nm
 is an opaque structure which represents an array.
+.Pp
+.Fn narray_new
+is used to create a pointer to a new
+.Ft narray .
+The caller must free this object with
+.Fn narray_free
+when it is no longer in use.
+.Pp
+Any objects, including those provided by libn (such as
+.Ft nhash ,
+.Ft nstring
+or even another
+.Ft narray )
+may be inserted into the array.
+.Pp
+.Fn narray_push
+will add the given
+.Fa item
+to the end of the
+.Fa array .
+.Fn narray_pop
+will remove the last item in the
+.Fa array
+and return it. 
+.Pp
+.Fn narray_unshift
+will add the given
+.Fa item
+to the beginning of the
+.Fa array .
+.Fn narray_shift
+will remove the first item in the
+.Fa array
+and return it.
+.Pp
+The alternate forms
+.Fn narray_push_many
+and
+.Fn narray_unshift_many
+will accept any number of
+.Fa items .
+The list of
+.Fa items ,
+however, must be terminated with
+.Dv NULL .
 .\" =====
 .Sh EXAMPLES
 TODO

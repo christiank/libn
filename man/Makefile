@@ -23,7 +23,7 @@ pdf-docs: \
 #####
 
 .mdoc.html:
-	$(MANDOC) -Thtml $(.ALLSRC) > $(.TARGET)
+	$(MANDOC) -Thtml -Ostyle=./style.css $(.ALLSRC) > $(.TARGET)
 
 .mdoc.pdf:
 	$(MANDOC) -Tpdf $(.ALLSRC) > $(.TARGET)

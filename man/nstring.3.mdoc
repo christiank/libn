@@ -37,6 +37,16 @@ creates a new pointer to
 The caller must free this object with
 .Fn nstring_free
 when it is no longer in use.
+.Pp
+.Fn nstring_cat
+and
+.Fn nstring_cat_cstr
+will append the contents of 
+.Fa str2
+to
+.Fa str1 .
+In both cases, the pointer to the original string (with its new contents) is
+returned.
 .\" =====
 .Sh EXAMPLES
 TODO

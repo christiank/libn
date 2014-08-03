@@ -6,7 +6,7 @@
 
 CC = clang -Wall
 AR = ar rscv
-CFLAGS = -I./include -I./mruby/include
+CFLAGS = -I./include -I/usr/pkg/include
 
 OBJS = \
 	src/global.o \

@@ -3,8 +3,8 @@
 .PHONY: clean
 
 CC = clang -Wall
-CFLAGS = -I../../include -I../../mruby/include
-LDFLAGS = -L../.. -L../../mruby/build/host/lib
+CFLAGS = -I../../include -I/usr/pkg/include
+LDFLAGS = -L../.. -L/usr/pkg/lib
 LIBS = -ln -lmruby -lm
 
 hello: hello.c

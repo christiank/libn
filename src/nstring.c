@@ -8,6 +8,7 @@
 #include <mruby/string.h>
 #include "libn/nstring.h"
 #include "libn/global.h"
+#include "libn/narray.h"
 
 nstring *
 nstring_new(const char *str)
@@ -69,3 +70,11 @@ nstring_cmp(const nstring *str1, const nstring *str2)
 {
   return mrb_str_cmp(__LIBN_R, str1->_string, str2->_string);
 }
+
+
+#if 0
+narray *
+nstring_split(const nstring *str, const char *splitter)
+{
+}
+#endif

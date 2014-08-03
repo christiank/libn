@@ -1,7 +1,7 @@
 # libn Makefile
 # Christian Koch <cfkoch@sdf.lonestar.org>
 
-.PHONY: default clean sloccount
+.PHONY: default clean clean-everything sloccount
 .SUFFIXES: .c .o
 
 CC = clang -Wall
@@ -24,6 +24,11 @@ libn.a: $(OBJS)
 
 clean:
 	rm -f *.a *.o *.core src/*.o
+
+clean-everything: clean
+	(cd man && make clean)
+	(cd example/hashblob && make clean)
+	(cd example/hello && make clean)
 
 sloccount:
 	sloccount ./src ./include 2>/dev/null | grep ansic

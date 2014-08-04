@@ -26,3 +26,21 @@ nset_free(nset *set)
 {
   free(set);
 }
+
+
+nstringset *
+nstringset_new(void)
+{
+  nstringset *set;
+
+  set = malloc(sizeof(nstringset));
+  set->_set = mrb_hash_new(__LIBN_R);
+
+  return set;
+}
+
+
+void nstringset_free(nstringset *set)
+{
+  free(set);
+}

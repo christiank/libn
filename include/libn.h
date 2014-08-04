@@ -11,6 +11,7 @@
 #include "libn/global.h"
 #include "libn/narray.h"
 #include "libn/nhash.h"
+#include "libn/nset.h"
 #include "libn/nstring.h"
 
 #endif /* LIBN_H */

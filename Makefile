@@ -12,6 +12,7 @@ OBJS = \
 	src/global.o \
 	src/narray.o \
 	src/nhash.o \
+	src/nset.o \
 	src/nstring.o
 
 default: libn.a
@@ -29,6 +30,7 @@ clean-everything: clean
 	(cd man && make clean)
 	(cd example/hashblob && make clean)
 	(cd example/hello && make clean)
+	(cd test && make clean)
 
 sloccount:
 	sloccount ./src ./include 2>/dev/null | grep ansic

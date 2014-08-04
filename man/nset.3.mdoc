@@ -1,0 +1,59 @@
+.\" vim: filetype=groff
+.\" nnset.3.mdoc
+.\" Christian Koch <cfkoch@sdf.lonestar.org>
+.\" =====
+.Dd August 4, 2014
+.Dt NSTRING 3
+.Os
+.\" =====
+.Sh NAME
+.Nm nset
+.Nd libn routines for manipulating sets
+.\" =====
+.Sh SYNOPSIS
+.Fd "#include <libn.h>"
+.Ft "nset *"
+.Fn nset_new "void"
+.Ft "void"
+.Fn nset_free "nset *set"
+.Ft "nstringset *"
+.Fn nstringset_new "void"
+.Ft "void"
+.Fn nstringset_free "nstringset *set"
+.Ft "void"
+.Fn nstringset_add "nstringset *set, const nstring *str"
+.Ft "void"
+.Fn nstringset_add_cstr "nstringset *set, const char *str"
+.Ft "bool"
+.Fn nstringset_include "nstringset *set, const nstring *str"
+.Ft "bool"
+.Fn nstringset_include_cstr "nstringset *set, const char *str"
+.\" =====
+.Sh DESCRIPTION
+.Ft nset
+is an opaque structure which represents a set of objects.
+.Ft nstringset
+is an opaque structure which represents a set of
+.Ft
+nstring
+objects.
+.\" =====
+.Sh EXAMPLES
+TODO
+.\" =====
+.Sh SEE ALSO
+.Xr narray 3 ,
+.Xr nhash 3 ,
+.Xr nstring 3
+.\" =====
+.Sh HISTORY
+The
+.Nm
+structure and related functions first appeared in
+.Nm libn
+version 0.0.0.
+.\" =====
+.Sh AUTHORS
+.An "Christian Koch" Aq cfkoch@sdf.lonestar.org
+.\" =====
+.\".Sh BUGS

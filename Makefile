@@ -28,7 +28,6 @@ clean:
 
 clean-everything: clean
 	(cd man && make clean)
-	(cd example/hashblob && make clean)
 	(cd example/hello && make clean)
 	(cd test && make clean)
 

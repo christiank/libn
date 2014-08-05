@@ -10,9 +10,13 @@ LIBS = -ln -lmruby -lm
 COMPILE = $(CC) -static -o $(.TARGET) $(.ALLSRC) $(LDFLAGS) $(LIBS)
 
 BINS = \
+	nhash_test \
 	nset_test
 
 default: $(BINS)
+
+nhash_test: nhash_test.o
+	$(COMPILE)
 
 nset_test: nset_test.o
 	$(COMPILE)
@@ -21,4 +25,4 @@ nset_test: nset_test.o
 	$(CC) -c $(CFLAGS) -o $(.TARGET) $(.ALLSRC)
 
 clean:
-	rm -f nset_test *.o *.core
+	rm -f $(BINS) *.o *.core

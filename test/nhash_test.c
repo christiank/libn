@@ -1,5 +1,5 @@
 /*
- * hashblob.c Example
+ * nhash_test.c Example
  * Christian Koch <cfkoch@sdf.lonestar.org>
  */
 

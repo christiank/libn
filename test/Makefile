@@ -10,12 +10,24 @@ LIBS = -ln -lmruby -lm
 COMPILE = $(CC) -static -o $(.TARGET) $(.ALLSRC) $(LDFLAGS) $(LIBS)
 
 BINS = \
+	narray_test \
 	nhash_test \
+	nstring_test \
+	nstringhash_test \
 	nset_test
 
 default: $(BINS)
 
+narray_test: narray_test.o
+	$(COMPILE)
+
 nhash_test: nhash_test.o
+	$(COMPILE)
+
+nstring_test: nstring_test.o
+	$(COMPILE)
+
+nstringhash_test: nstringhash_test.o
 	$(COMPILE)
 
 nset_test: nset_test.o

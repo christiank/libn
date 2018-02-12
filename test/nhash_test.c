@@ -1,6 +1,6 @@
 /*
  * nhash_test.c Example
- * Christian Koch <cfkoch@sdf.lonestar.org>
+ * Charlotte Koch <cfkoch@edgebsd.org>
  */
 
 #include <stdio.h>

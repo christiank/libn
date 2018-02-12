@@ -1,5 +1,5 @@
 # libn Documentation Makefile
-# Christian Koch <cfkoch@sdf.lonestar.org>
+# Charlotte Koch <cfkoch@edgebsd.org>
 
 .PHONY: default html-docs pdf-docs clean
 .SUFFIXES: .html .mdoc .pdf

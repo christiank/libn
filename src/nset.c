@@ -1,6 +1,6 @@
 /*
  * nset.c
- * Christian Koch <cfkoch@sdf.lonestar.org>
+ * Charlotte Koch <cfkoch@edgebsd.org>
  */
 
 #include <stdbool.h>

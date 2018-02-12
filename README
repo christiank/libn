@@ -7,7 +7,7 @@ the help of mruby.
 
 == About libn ==
 
-libn is written and maintained by Christian Koch <cfkoch@sdf.lonestar.org>.
+libn is written and maintained by Charlotte Koch <cfkoch@edgebsd.org>.
 
 The source code is released under a 2-clause BSD-style license. See the
 LICENSE file for details.

@@ -1,5 +1,5 @@
 # libn Makefile
-# Christian Koch <cfkoch@sdf.lonestar.org>
+# Charlotte Koch <cfkoch@edgebsd.org>
 
 .PHONY: default clean clean-everything sloccount
 .SUFFIXES: .c .o

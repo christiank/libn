@@ -1,6 +1,6 @@
 /*
  * narray.h
- * Christian Koch <cfkoch@sdf.lonestar.org>
+ * Charlotte Koch <cfkoch@edgebsd.org>
  */
 
 #ifndef NARRAY_H

@@ -1,6 +1,6 @@
 /*
  * global.h - Global variables and other fun stuff
- * Christian Koch <cfkoch@sdf.lonestar.org>
+ * Charlotte Koch <cfkoch@edgebsd.org>
  */
 
 #ifndef LIBN_GLOBAL_H

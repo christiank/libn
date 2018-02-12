@@ -1,6 +1,6 @@
 /*
  * global.c
- * Christian Koch <cfkoch@sdf.lonestar.org>
+ * Charlotte Koch <cfkoch@edgebsd.org>
  */
 
 #include <mruby.h>

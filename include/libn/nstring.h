@@ -1,6 +1,6 @@
 /*
  * nstring.h
- * Christian Koch <cfkoch@sdf.lonestar.org>
+ * Charlotte Koch <cfkoch@edgebsd.org>
  */
 
 #ifndef NSTRING_H

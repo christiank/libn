@@ -1,6 +1,6 @@
 /*
  * nstring.c
- * Christian Koch <cfkoch@sdf.lonestar.org>
+ * Charlotte Koch <cfkoch@edgebsd.org>
  */
 
 #include <stdlib.h>

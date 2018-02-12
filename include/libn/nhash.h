@@ -1,6 +1,6 @@
 /*
  * nhash.h
- * Christian Koch <cfkoch@sdf.lonestar.org>
+ * Charlotte Koch <cfkoch@edgebsd.org>
  */
 
 #ifndef NHASH_H

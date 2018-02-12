@@ -1,6 +1,6 @@
 /*
  * libn.h
- * Christian Koch <cfkoch@sdf.lonestar.org>
+ * Charlotte Koch <cfkoch@edgebsd.org>
  */
 
 #ifndef LIBN_H

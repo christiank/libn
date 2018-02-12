@@ -4,10 +4,10 @@
 DISTNAME=	mruby-1.0.0
 PKGNAME=	mruby-1.0.0
 CATEGORIES=	local
-MASTER_SITES=	http://lipgloss.local/~christian/
+#MASTER_SITES=	XXX
 EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=	cfkoch@sdf.lonestar.org
+MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	http://www.mruby.org
 COMMENT=	Lightweight implementation of Ruby
 LICENSE=	mit
